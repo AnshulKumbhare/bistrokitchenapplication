@@ -1,0 +1,90 @@
+*{
+    font-family: 'montserrat', sans-serif;
+}
+
+.chef-container{
+    width: 100%;
+    margin: auto;
+    margin-top: 95px;
+    height: max-content;
+    border: none;
+    background-color: #eeeeee;
+    padding: 80px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chef-container h2{
+    font-size: 13px;
+    margin: 0px;
+    color: #7f7f90;
+    font-weight: 500;
+}
+
+.chef-container p{
+    font-size: 48px;
+    margin: 0px;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+.chef-container span{
+    font-family: 'Amatic SC', sans-serif;
+    color: #ce1212;
+}
+
+.chef-card-container{
+    border: none;
+    width: 90%;
+    height: max-content;
+    display: flex;
+    padding: 20px ;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.chef-card{
+    width: 350px;
+    height: 550px;
+    border: none;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chef-card:hover{
+    transform: scale(1.05);
+}
+
+.chef-card img{
+    width: 100%;
+}
+
+.chef-info{
+    border: none;
+    width: 90%;
+    height: 100%;
+    text-align: center;
+}
+
+.chef-info h3{
+    margin: 18px 0px 10px;
+}
+
+.chef-info span{
+    font-size: 14px;
+    color: #21252966;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.chef-info p{
+    font-size: 14px;
+    font-family: 'montserrat', sans-serif;
+}

@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'asset/css/header.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet"> 
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        
+        <link rel="stylesheet" href="{% static 'asset/css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'asset/css/menu.css' %}">
+        <link rel="stylesheet" href="{% static 'asset/css/menudetails.css' %}">
+        <link rel="stylesheet" href="{% static 'asset/css/contact.css' %}">
+        <link rel="stylesheet" href="{% static 'asset/css/events.css' %}">
+        
+    </head>
+    <body>
+        <!-- Header start -->
+
+        <header>
+            <div class="navbar-container">
+                <!-- nav 1 start -->
+                <div class="nav-1">
+                    <a href="/home">
+                        <h2>Bistro</h2>
+                        <h4>Kitchen<i id="nav-logoicon" class="ri-cup-fill"></i></h4>
+                    </a>    
+                </div>
+                <!-- nav 1 end -->
+
+                <!-- nav 2 start -->
+                <div class="nav-2">
+                    <a href="/menu">Menu</a>
+                    <a href="/chefs">Our Chefs</a>
+                    {% if user.is_authenticated %}
+                    <a href="/placeorder">Your Order</a>
+                    {% else %}
+                    <a href="/login">Your Order</a>
+                    {% endif %}
+                    <a href="/contactus">Contact</a>
+                    <span class="search-bar">
+                        <button><i style="font-size: 18px;" class="ri-search-line"></i></button>
+                        <input type="search" placeholder="Search for Products, Brands and more....">
+                    </span>
+                </div>
+                <!-- nav 2 end -->
+
+                <!-- nav 3 start -->
+                <div class="nav-3">
+                    {% if user.is_authenticated %}
+                    <a class="nav-3a" title="Cart" href="/viewcart"><i  class="ri-shopping-cart-line"></i></a>
+                    {% else %}
+                    <a class="nav-3a" title="Cart" href="/login"><i  class="ri-shopping-cart-line"></i></a>
+                    {% endif %}
+                    
+                    {% if user.is_authenticated %}
+                    <a class="nav-3a" title="Log Out" href="/logout"><i id="log out" class="ri-shut-down-line"></i></a>
+                    {% else %}
+                    <a class="nav-3a" title="Account" href="/login"><i  class="ri-user-line"></i></a>
+                    {% endif %}
+                    <div class="dropdown">
+                        <button class="dropbtn"><i id="nav-3menu-i" class="ri-menu-line"></i></button>
+                        <div class="menu-dropdown-content">
+                            <a href="/home">Home</a>
+                            <a href="/menu">Menu</a>
+                            <a href="/chefs">Our Chefs</a>
+                            <a href="/contactus">Contact</a>
+                            {% if user.is_authenticated %}
+                            <a href="/viewcart">Cart</a>
+                            <a href="/logout">Log Out</a>
+                            {% else %}
+                            <a href="/login">Log In</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <!-- nav 3 end -->
+            </div>
+        </header>
+
+        <!-- Header End -->
+
+    </body>
+</html>

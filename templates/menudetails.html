@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block 'main' %}
+{% load static %}
+
+<!-- menudetails start -->
+
+<div class="menudetails-container">
+    {% for i in menu %}
+    <div class="menuimg-container">
+        <img src="{{i.menuimage.url}}" alt="">
+    </div>
+    <div class="details-container">
+        <h2>Menu Details</h3>
+        <p>
+            <h4>{{i.name}}</h4>
+            <p>
+                <strong>Price :</strong> Rs. {{i.price}}/-<br>
+                <strong>Category :</strong>
+                {% if i.category == 1 %}
+                    Starters
+                    {% elif i.category == 2 %}
+                    Breakfast
+                    {% elif i.category == 3 %}
+                    Lunch
+                    {% elif i.category == 4 %}
+                    Dinner
+                    {% else %}
+                    Bread & Rice
+                {% endif %}
+                 <br>
+                <span>{{i.details}}</span> <br>
+                {% if success %}
+                <span style="color: green; font-weight: bold; font-size: 14px;">{{success}}</span> <br> 
+                {% endif %}
+                {% if errmsg %}
+                <span style="color: red; font-weight: bold; font-size: 14px;">{{errmsg}}</span> <br>
+                {% endif %}
+                <a href="/addtocart/{{i.id}}"><button>Add to Cart</button></a>  
+                <a href=""><button>Buy Now</button></a> 
+                <a href="/menu"><button>See More</button></a>
+            </p>
+        </p>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- menudetails end -->
+
+{% endblock 'main' %}

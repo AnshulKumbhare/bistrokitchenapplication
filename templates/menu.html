@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block 'main' %}
+{% load static %}
+<!-- menu start -->
+
+<div class="menu-filter-container">
+    <div class="filter-container">
+        
+        <h4>Filter</h4>
+        
+        <p id="filter-by">By Menu</p>
+        <p><i class="ri-arrow-right-s-line"></i><a href="/menufilter/1">Starters</a></p>
+        <p><i class="ri-arrow-right-s-line"></i><a href="/menufilter/2">Breakfast</a></p>
+        <p><i class="ri-arrow-right-s-line"></i><a href="/menufilter/3">Lunch</a></p>
+        <p><i class="ri-arrow-right-s-line"></i><a href="/menufilter/4">Dinner</a></p> 
+        <p><i class="ri-arrow-right-s-line"></i><a href="/menufilter/5">Bread & Rice</a></p><br>
+        
+        <p id="filter-by">By Price</p>
+        <p><i class="ri-arrow-right-s-line"></i><a href="/pricefilter/0">Lowest to Highest</a></p>
+        <p><i class="ri-arrow-right-s-line"></i><a href="/pricefilter/1">Highest to Lowest</a></p> <br>
+
+        <form class="minmaxform" action="/minmaxrange">
+            <p id="filter-by">By Min & Max value</p>
+            <table border="0px " cellspacing="10px">
+                <tr>
+                    <td>Min Value</td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="minval" id="minval" placeholder="min value: Rs 100"></td>
+                </tr>
+                <tr>
+                    <td>Max value</td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="maxval" id="maxval" placeholder="max value: Rs 5000"></td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="submit" name="btn" id="btn" value="submit"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="menu-container">
+        <div class="menu-container-heading">CHECK OUR <span>YUMMY MENU</span></div>
+        <div class="menu-display">
+            
+            {% for i in menu %}
+            <div class="menu-display-card">
+                <img src="{{i.menuimage.url}}" alt="" height="210px">
+                <h2>
+                    {{i.name}}
+                    {% if i.category == 1 %}
+                    (Starters)
+                    {% elif i.category == 2 %}
+                    (Breakfast)
+                    {% elif i.category == 3 %}
+                    (Lunch)
+                    {% elif i.category == 4 %}
+                    (Dinner)
+                    {% else %}
+                    (Bread & Rice)
+                    {% endif %}
+                </h2>
+                <p id="p1">Rs {{i.price}} /-</p>
+                <p>{{i.details}}</p>
+                <a href="/menudetails/{{i.id}}"><button>See Details</button></a>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</div>
+
+<!-- menu end -->
+
+{% endblock 'main' %}

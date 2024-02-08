@@ -1,0 +1,173 @@
+/* MENU PAGE */
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu-filter-container{
+    height: max-content;
+    border: none;
+    padding: 40px 30px;
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #eee;
+}
+
+.filter-container{
+    width: max-content;
+    height: max-content;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 40px 30px;
+}
+
+.filter-container h4{
+    font-size: 46px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    margin: 0px;
+    color: red;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+#filter-by{
+    font-weight: 700;
+}
+
+.filter-container p{
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.filter-container a{
+    text-decoration: none;
+    color: black;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.filter-container a:hover{
+    opacity: 0.9;
+    color: red;
+}
+
+#maxval, #minval {
+    padding: 5px 10px;
+    outline: none;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.minmaxform #btn{
+    padding: 5px 40px;
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 40px;
+    transition: opacity 0.15s;
+}
+
+.minmaxform #btn:hover{
+    opacity: 0.7;
+}
+
+.menu-container{
+    width: 75%;
+    padding: 10px 30px;
+    height: max-content;
+    border: none ;
+    background-color: white;
+}
+
+.menu-container-heading{
+    font-family: 'Amatic SC', sans-serif;
+    text-align: center;
+    margin: 5px;
+    border-bottom: 2px solid;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.menu-container-heading span{
+    font-family: 'Amatic SC', sans-serif;
+    text-align: center;
+    margin: 5px;
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+}
+
+.menu-display{
+    border: none;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+.menu-display::-webkit-scrollbar{
+    display: none;
+}
+
+.menu-display-card{
+    width: 250px;
+    height: 550px;
+    border: 1px solid ;
+    padding: 30px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.menu-display-card img{
+    width: 100%;
+}
+
+.menu-display-card h2{
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 34px;
+    margin: 10px;
+}
+
+.menu-display-card #p1{
+    color: red;
+    font-weight: bolder;
+}
+
+.menu-display-card button{
+    padding: 10px 25px ;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: red;
+    border:1px solid red;
+    border-radius: 6px;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.menu-display-card button:hover{
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+}
+
+@media only screen and (max-width:768px){
+    .menu-filter-container{
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .filter-container{
+        width: 90%;
+        border: 1px solid;
+    }
+
+    .menu-display-card{
+        width: 90%;
+    }
+}

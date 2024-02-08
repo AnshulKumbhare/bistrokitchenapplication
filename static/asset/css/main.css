@@ -1,0 +1,414 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #fff;
+}
+
+
+/* INTRO SECTION */
+.main1-container{
+    width: 100%;
+    height: 700px;
+    padding: 30px 0px;
+    border: none ;
+    margin-top: 90px;
+    background-color: #eee;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main1-title{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: max-content;
+    border: none;
+}
+
+.main1-title h1{
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 60px;
+    margin: 10px;
+}
+
+.main1-title p{
+    margin: 10px 10px 25px;
+    color: #4f4f5a;
+    line-height: 22px;
+}
+
+.title-btn{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.title-btn a{
+    text-decoration: none;
+}
+
+.title-btn button{
+    padding: 10px 34px;
+    width: 180px;
+    border: 1px solid red;
+    font-size: 16px;
+    border-radius: 35px;
+    background-color: red;
+    color: white;
+    margin-right: 25px;
+    transition: box-shadow 0.5s;
+}
+
+.title-btn button:hover{
+    box-shadow: 0px 2px 20px 0px red;
+}
+
+#video-a{
+    color: black;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#video-a:hover{
+    color: red;
+}
+
+#video-a i{
+    color: rgb(173, 34, 34);
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.main1-img{
+    width: max-content;
+    height: max-content;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.main1-img img{
+    width: 80%;
+    
+}
+
+
+@media only screen and (max-width: 913px){
+    .main1-container{
+        flex-direction: column;
+        width: 100%;
+        height: max-content;
+    }
+
+    .main1-title{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        order: 2;
+    }
+
+    .main1-img{
+        width: fit-content;
+    }
+}
+
+
+/* ABOUT SECTION */
+
+.about-section-container{
+    width: 100%;
+    padding: 80px 0px;
+    height: max-content;
+    background-color: white;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading-container{
+    border: none;
+    width: max-content;
+    text-align: center;
+}
+
+.heading-container span{
+    color: grey;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.heading-container h1{
+    font-family:  'Amatic SC', sans-serif;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.section{
+    width: 90%;
+    height: max-content;
+    display: flex;
+    border: none;
+}
+
+.section1{
+    border:none;
+    width: 65%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-no{
+    width: max-content;
+    height: max-content;
+    text-align: center;
+    width: 50%;
+    padding: 5px;
+    background-color: white;
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+}
+
+.contact-no h4{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.contact-no p{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.section1 img{
+    width: 90%;
+}
+
+.section2{
+    border: none;
+    padding: 0px;
+    width: 35%;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+.section2 p{
+    font-style: italic;
+    color: black;
+    line-height: 22px;
+}
+
+.section2 ul{
+    padding: 0px;
+}
+
+.section2 li{
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+.section2 i{
+    color: red;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.section2 img{
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 913px){
+    .section{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section1{
+        width: 90%;
+    }
+
+    .contact-no h4{
+        font-size: 16px;
+        margin: 5px;
+    }
+    
+    .contact-no p{
+        color: red;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    .section2{
+        width: 90%;
+    }
+}
+
+
+
+
+/* WHY CHOOSE SECTION */
+
+.whysection-container{
+    width: 100%;
+    height: max-content;
+    padding: 80px 0px;
+    background-color: #eee;
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.card1{
+    width: 236px;
+    border: solid #ce1212;
+    padding: 30px;
+    background-color: #ce1212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card1 h3{
+    font-size: 34px;
+    margin: 0px 0px 30px;
+    color: white;
+    line-height: 40px;
+}
+
+.card1 p{
+    color: white;
+    font-size: 17px;
+    margin: 0px 0px 30px;
+    line-height: 28px;
+} 
+
+.card1 button{
+    padding: 8px 30px 8px;
+    margin-top: 1px auto;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    background-color: #ffffff4d;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.card1 button:hover{
+    color: #ce1212;
+    background-color: white;
+}
+
+.card234{
+    border: none ;
+    width: 70%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card{
+    padding: 40px 30px ;
+    height: 300px;
+    border: snone;
+    width: 20%;
+    background-color: white;
+    text-align: center;
+    transition: transform 0.4s;
+}
+
+.card span{
+    height: max-content;
+    width: max-content;
+    margin-bottom: 30px;
+}
+
+.card i{
+    color: #ce1212;
+    background-color: #ce12121a;
+    font-size: 34px;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.card h4{
+    font-size: 20px;
+    color: #212529;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card p{
+    color: #6c757d;
+    font-size: 15px;
+}
+
+.card:hover{
+    transform: scale(1.15);
+}
+
+@media only screen and (max-width: 1200px){
+    .card234{
+        flex-direction: column;
+        width: 60%;
+    }
+
+    .card{
+        height: max-content;
+        width: 80%;
+        transition: none;
+        margin-bottom: 20px;
+    }
+
+    .card:hover{
+        transform: scale(1);
+    }
+
+    .whysection-container{
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+}
+
+@media only screen and (max-width: 992px){
+    .whysection-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1{
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+    .card234{
+        width: 100%;
+    }
+
+    .card{
+        width: 60%;
+    }
+}

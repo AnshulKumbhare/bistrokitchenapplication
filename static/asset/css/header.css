@@ -1,0 +1,310 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-container{
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: none;
+    height: 90px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+}
+
+.nav-1{
+    width: 20%;
+    height: 100px;
+    box-sizing: border-box;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    margin-left: 10px;  
+}
+
+.nav-1 a{
+    text-decoration: none;
+    color: black;
+    transition: transform 0.15s;
+    
+}
+
+.nav-1 a:hover{
+    transform: scale(1.05);
+}
+
+.nav-1 a:active{
+    transform: scale(0.9);
+}
+
+.nav-1 h2{
+    margin: 0px;
+    letter-spacing: 6px;
+    font-size: 1.5em;
+}
+
+.nav-1 h4{
+    margin: 0px;
+    font-size: large;
+    letter-spacing: 7px;
+    word-spacing: 0px;
+    font-size: 14px;
+}
+
+.nav-2{
+    width: 65%;
+    height: 100px;
+    box-sizing: border-box;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-2 a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    padding: 10px 5px;
+    border-bottom: 3px solid white;
+    transition: border-bottom 0.15s;
+}
+
+.nav-2 a:hover{
+    border-bottom: 3px solid black;
+}
+
+.nav-2 span{
+    border: 1px solid darkgray;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.search-bar button{
+    background-color: white;
+    border: none;
+    height: 38px;
+    width: 38px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.search-bar input{
+    width: 70%;
+    padding: 11px 10px;
+    border: none;
+    border-left: 1px solid darkgray;
+    outline: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-sizing: border-box;
+}
+
+.nav-3{
+    width: 15%;
+    height: 90px;
+    box-sizing: border-box;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-3a{
+    text-decoration: none;
+    color: black;
+    background-color:white;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 50%;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+.nav-3a:hover{
+    color: white;
+    background-color:black;
+}
+
+.nav-3 i{
+    font-size: 18px;
+}
+
+.dropbtn {
+    background-color:black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.dropbtn i{
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+.menu-dropdown-content{
+    display: none;
+    position: absolute;
+    right: 0px;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menu-dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+.menu-dropdown-content a:hover {
+    background-color:black;
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .menu-dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: black;
+}
+
+@media only screen and (max-width: 1120px){
+    
+    .navbar-container{
+        background-color: black;
+    }
+
+    .nav-1 a{
+        color: white;
+    }
+
+    #nav-logoicon{
+        color: white;
+    }
+
+    .nav-2 a{
+        color: white;
+        border-bottom: 3px solid black;
+        font-size: 12px;
+    }
+
+    .nav-2 a:hover{
+        border-bottom: 3px solid white;
+    }
+
+    .nav-2 span{
+        border: 1px solid white;
+        border-radius: 5px;
+        background-color: white;
+        box-sizing: border-box;
+    }
+
+    .nav-3a{
+        color: white;
+        background-color:black;
+        padding: 10px;
+        border: 1px solid black;
+    }
+    
+    .nav-3a:hover{
+        color: black;
+        background-color:white;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .nav-1{
+        width: 25%;
+        margin: 0px;
+    }
+
+    .nav-1 h2{
+        font-size: 1em;
+    }
+
+    .nav-1 h4{
+        font-size: 9px;
+    }
+
+    .nav-2{
+        width: 40%;
+    }
+    
+    .nav-2 a{
+        display: none;
+    }
+
+    .nav-2 span{
+        width: 90%;
+    }
+
+    .nav-3{
+        width: 35%;
+    }
+
+    .nav-3a{
+        padding: 6px;
+    }
+
+    .nav-3 i{
+        font-size: 16px;
+    }
+
+    .dropbtn{
+        display: inline;
+    }
+
+
+}
+
+@media only screen and (max-width: 527px){
+    .nav-1{
+        width: 70%;
+        align-items: flex-start;
+    }
+
+    .nav-1 a{
+        margin: 50px ;
+    }
+
+    .nav-2{
+        border: 1px solid red;
+        display: none;
+    }
+
+    .nav-3{
+        width: 30%;
+    }
+
+    .nav-3a{
+        display: none;
+    }
+}

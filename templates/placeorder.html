@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block 'main' %}
+{% load static %}
+<!-- Cart start -->
+
+<div class="cart-main-container">
+    <div class="cart-heading">
+        Your <span>Order</span>
+    </div>
+    <div class="cart-container">
+        <div class="cart-items-container">
+            <h3>Your Items</h3>
+
+            {% for i in orderitems %}
+            <div class="cart-items-card">
+                <img src="{{i.pid.menuimage.url}}" alt="">
+                <p>
+                    <span>{{i.pid.name}}</span><br>
+                    <strong>Price: </strong> Rs. <strong>{{i.pid.price}}</strong>/- <br>
+                    <strong>Category:</strong> 
+                    {% if i.pid.category == 1 %} 
+                        Starters
+                    {% elif i.pid.category == 2 %}
+                        Breakfast
+                    {% elif i.pid.category == 3 %}
+                        Lunch
+                    {% elif i.pid.category == 4 %}
+                        Dinner
+                    {% else %}
+                        Bread & Rice    
+                    {% endif %}<br>
+
+                     <strong>Quantity: </strong>{{i.qty}} <br>
+                    {{i.pid.details}} <br>
+                    <a href="/removeorder/{{i.id}}"><button class="removebtn">Remove</button></a>
+                </p>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="cart-customer-price-details">
+            <div class="customer-details-container">
+                {% for i in orderitems %}
+                {% if forloop.counter == 1 %}
+                <h3>Your Information</h3>
+                <p>
+                    <strong>Name:</strong> {{i.uid.first_name}} {{i.uid.last_name}} <br>
+                    <strong>Username: </strong> {{i.uid.username}} <br>
+                    <strong>email: </strong> {{i.uid.email}}
+                </p>
+                {% endif %}
+                {% endfor %}
+                <br>
+                <h3>Order Details</h3>
+                <p>
+                    {% for i in orderitems %}
+                    {% if forloop.counter == 1 %}
+                    <strong>Your Order Id: </strong>&nbsp;&nbsp;{{i.orderid}} <br>
+                    {% endif %} 
+                    <strong>{{i.pid.name}}</strong> X <strong>{{i.qty}} </strong>&nbsp;&nbsp;<br>
+                    {% endfor %}
+                    <span style="font-size: 18px; font-weight: bolder;">Total Items: </span>{{items}} <br>
+                    <span style="font-size: 18px; font-weight: bolder;">Total Price: Rs. {{totalprice}}/-</span>
+                </p>
+                <a href="/makepayment"><button class="placeorderbtn">Make Payment</button></a>
+            </div>
+        </div>
+    </div> 
+</div>
+<!-- Cart end -->
+
+{% endblock 'main' %}

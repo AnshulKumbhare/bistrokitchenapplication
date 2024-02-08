@@ -1,0 +1,134 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.testimonial-container{
+    width: 100%;
+    margin: auto;
+    height: max-content;
+    background-color: white;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.testimonial-container span{
+    width: 12px;
+    color:#7f7f90;
+}
+
+.testimonial-container h2{
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 48px;
+    margin: 10px 10px 30px 10px;
+    padding-bottom: 30px;
+}
+
+.testimonial-container #h2-span{
+    color: red;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 48px;
+}
+
+.testimonial-slider{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.testimonial-info{
+    width: 70%;
+    margin-bottom: 20px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    border-top:  1px solid red;
+}
+
+.test-info{
+    width: 100%;
+}
+
+.testimonial-info p{
+    margin: 20px;
+}
+
+.testimonial-info i{
+    color: orangered;
+    font-size: 28px;
+
+}
+
+.testimonial-info img{
+    width: 170px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+@media only screen and (max-width: 832px){
+    .testimonial-info{
+        flex-direction: column;
+    }
+
+    .testimonial-info img{
+        order: 1;
+    }
+
+    .test-info{
+        order: 2;
+    }
+}
+
+
+.gallary-container{
+    width: 100%;
+    background-color: #eeeeee;
+    margin: auto;
+    margin-top: 0px;
+    padding: 30px 0px;
+}
+
+.gallary-container h2{
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 48px;
+    margin: 10px;
+    text-align: center;
+}
+
+.gallary-container span{
+    color: red;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 48px;
+}
+
+.gallary-main-container{
+    width: 95%;;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px black;
+}
+
+.gallary-main-container img{
+    width: 100%;
+    height: 300px;
+    animation-name: slidergallary;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes slidergallary {
+    from {
+        transform: translate(0px);
+    }
+
+    to {
+        transform: translate(-950px);
+    }
+}
+

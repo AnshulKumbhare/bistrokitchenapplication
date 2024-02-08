@@ -1,0 +1,136 @@
+*{
+    font-family: 'montserrat', sans-serif;
+}
+
+body{
+    background-color: #eeeeee;
+}
+
+.contact-container{
+    width: 100%;
+    margin: 95px auto;
+    height: max-content;
+    padding: 80px 30px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.contact-heading1{
+    text-align: center;
+    color: #7f7f90;
+}
+
+.contact-heading2{
+    text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 48px;
+    color: #212529;
+    padding: 0px 0px 30px;
+}
+
+.contact-heading2 span{
+    font-family: 'Amatic SC', sans-serif;
+    color: #ce1212;
+}
+
+.contact-iframecontainer{
+    box-sizing: border-box;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-iframecontainer iframe{
+    width: 85%;
+}
+
+.contact-info-container{
+    width: 100%;
+    height: max-content;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info-card{
+    width: 40%;
+    min-width: 355px;
+    height: 140px;
+    margin: 24px 12px;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info-card i{
+    font-size: 48px;
+    border: 1px solid;
+    color: white;
+    background-color: #ce1212;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 0px 15px 0px;
+}
+
+#contact-info-card-p{
+    line-height: 32px;
+}
+
+#contact-info-card-p span{
+    font-size: 22px;
+    color: #6C757D;
+    font-weight: 700;
+}
+
+.contact-form-container{
+    width: 100%;
+    height: max-content;
+}
+
+
+#contact-inp{
+    padding: 10px 10px;
+    width: 90%;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+#contact-inp1{
+    padding: 10px 10px;
+    width: 95%;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+#contact-inp-sub{
+    padding: 12px 40px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #ce1212;
+    border: 1px solid;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+#contact-inp-sub:hover{
+    opacity: 0.9;
+}
+
+@media only screen and (max-width: 860px){
+    .contact-info-card{
+        width: 90%;
+    }
+
+    .contact-iframecontainer iframe{
+        width: 100%;
+    }
+}

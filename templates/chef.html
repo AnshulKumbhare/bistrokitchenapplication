@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block 'main' %}
+{% load static %}
+
+<!-- Chef start -->
+<div class="chef-container">
+    <h2>CHEF</h2>
+    <p>OUR <span>PROFESSIONAL</span> CHEFS</p>
+    <div class="chef-card-container">
+        
+        {% for i in chefinfo %}
+        <div class="chef-card">
+            <img src="{{i.chefimage.url}}" alt="">
+            <div class="chef-info">
+                <h3>{{i.name}}</h3>
+                <span>{{i.position}}</span>
+                <p>
+                    {{i.chefdetails}}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+               
+    </div>
+</div>
+<!-- chef end -->
+
+{% endblock 'main' %}

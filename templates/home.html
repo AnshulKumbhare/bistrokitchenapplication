@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block 'main' %}
+{% load static %}
+
+<!-- iintro section start -->
+<div class="main1-container">
+    <div class="main1-title">
+        <h1>
+            ENJOY YOUR HEALTHY <br>
+            DELICIOUS FOOD 
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur illo eveniet at itaque commodi est ut ratione nobis iure nemo tempora vel, similique dicta cumque temporibus excepturi quas quasi?
+        </p>
+        <div class="title-btn">
+            <a href="/menu"><button>Order Online</button></a>
+            <a href="https://www.youtube.com/watch?v=Am6-Kg_Fjgs" id="video-a"><i class="ri-play-circle-line"></i>&nbsp;&nbsp;&nbsp;<span>Watch Video</span></a>
+        </div>
+    </div>
+    <div class="main1-img">
+        <img src="{% static 'asset/images/hero-img.png' %}" alt="">
+    </div>
+</div>
+<!-- Intro section end -->
+
+
+<!-- About section start -->
+
+<div class="about-section-container">
+    <div class="heading-container">
+        <span>ABOUT US</span>
+        <h1>LEARN MORE ABOUT US</h1>
+    </div>
+    <div class="section">
+        <div class="section1">
+            <img src="{% static 'asset\images\about.jpg' %}" alt="">
+            <div class="contact-no">
+                <h4>Book a Table</h4>
+                <p>+1 5589 55488 55</p>
+            </div>
+        </div>
+        <div class="section2">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum laudantium quisquam sed sunt repudiandae laborum consequuntur, libero autem sint ut qui fugit officiis natus labore porro cum, veritatis consectetur magnam.
+            </p>
+            <ul type="none">
+                <li><i class="ri-check-double-line"></i>&nbsp;&nbsp;<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia esse aliquam </span></li>
+                <li><i class="ri-check-double-line"></i>&nbsp;&nbsp;<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia esse aliquam </span></li>
+                <li><i class="ri-check-double-line"></i>&nbsp;&nbsp;<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia esse aliquam </span></li>
+            </ul>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos magnam vero quisquam deserunt aliquam quos dicta officia et fugiat officiis? Modi voluptatibus neque voluptatum minus perspiciatis, facere iusto at nesciunt!
+            </p>
+            <img src="{% static 'asset\images\about-2.jpg' %}" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- About section end -->
+
+
+<!-- why choose section start -->
+
+<div class="whysection-container">
+    <div class="card1">
+        <h3>Why Choose Bistro & Co.?</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio impedit eligendi numquam sunt dolore iusto natus harum, nesciunt officia eum voluptatum ab quas aut, nam alias sit! A, numquam sint?
+        </p>
+        <button>Learn More</button>
+    </div>
+    <div class="card234">
+        <div class="card">
+            <span><i class="ri-survey-line"></i></span>
+            <h4>Corporis voluptates officia eiusmod</h4>
+            <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+        </div>
+        <div class="card">
+            <i class="ri-vip-diamond-line"></i>
+            <h4>Corporis voluptates officia eiusmod</h4>
+            <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+        </div>
+        <div class="card">
+            <i class="ri-restaurant-line"></i>
+            <h4>Corporis voluptates officia eiusmod</h4>
+            <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+        </div>
+    </div>
+</div>
+
+<!-- why choose section End -->
+
+<!-- Events start -->
+
+<!-- testimonial start -->
+
+<div style="background-color: white;" class="testimonial-container">
+    <span>TESTIMONIALS</span>
+    <h2>WHAT ARE THEY <span id="h2-span">SAYING ABOUT US?</span></h2>
+    <div class="testimonial-slider">
+        {% for i in testimony %}
+        <div class="testimonial-info">
+            <div class="test-info">
+                <p>
+                    <i class="ri-double-quotes-l"></i>
+                    {{i.testimony}}
+                    <i class="ri-double-quotes-r"></i>
+                    <h3 style="margin: 0px;">{{i.pname}}</h3>
+                    <small>{{i.ptitle}}</small>
+                </p>
+            </div>
+            <img src="{{i.ptimage.url}}" alt="">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- testimonial end -->
+
+<div class="gallary-container">
+    <h2>Our <span>Snaps</span></h2>
+    <div class="gallary-main-container">
+        <img src="{% static 'asset\images\gallery\gallery-1.jpg' %}" alt="">
+        <img src="{% static 'asset\images\gallery\gallery-2.jpg' %}" alt="">
+        <img src="{% static 'asset\images\gallery\gallery-3.jpg' %}" alt="">
+        <img src="{% static 'asset\images\gallery\gallery-4.jpg' %}" alt="">
+        <img src="{% static 'asset\images\gallery\gallery-5.jpg' %}" alt="">
+        <img src="{% static 'asset\images\gallery\gallery-6.jpg' %}" alt="">
+    </div>
+</div>
+
+<!-- Events end -->
+
+{% endblock 'main' %}

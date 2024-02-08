@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Footer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'asset/css/footer.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="{% static 'asset/css/chef.css' %}">
+        <link rel="stylesheet" href="{% static 'asset/css/cart.css' %}">
+        
+    </head>
+    <body>
+
+        <!-- Footer Start -->
+        
+        <div class="footer-container">
+            <!-- column 1 start-->
+            <div class="column">
+                <p id="column-p">
+                    <h4><i id="h4-i" class="ri-map-pin-line"></i>&nbsp;&nbsp;&nbsp;Address</h4>
+                    <p id="content-p">
+                        A108 Adam Street <br>
+                        New York, NY 535022 - US
+                    </p>
+                </p>
+                <p id="column-p">
+                    <h4><i id="h4-i" class="ri-phone-line"></i>&nbsp;&nbsp;&nbsp;Reservation</h4>
+                    <p id="content-p">
+                        <strong>Phone:</strong> +1 5589 55488 55 <br>
+                        <strong>Email:</strong> info@example.com
+                    </p>
+                </p>
+            </div>
+            <!-- column 1 end -->
+
+            <!-- column 2 start -->
+            <div class="column">
+                <p id="column-p">
+                    <h4><i id="h4-i" class="ri-time-line"></i>&nbsp;&nbsp;&nbsp;Opening Hours</h4>
+                    <p id="content-p">
+                        <strong>Mon-Sat&nbsp;:&nbsp;</strong> 11AM - 23PM <br>
+                       <strong>Sunday&nbsp;:&nbsp;</strong> Closed
+                    </p>
+                </p>
+            </div>
+            <!-- column 2 end -->
+
+            <!-- column 3 start -->
+            <div class="column">
+                <p id="column-p">
+                    <h4><i id="h4-i" class="ri-link"></i>&nbsp;&nbsp;&nbsp;Quick Links</h4>
+                    <p id="content-p">
+                        <i class="ri-arrow-right-s-line"></i><a id="quick-links" href="/home">Home</a><br>
+                        <i class="ri-arrow-right-s-line"></i><a id="quick-links" href="/menu">Menu</a><br>
+                        <i class="ri-arrow-right-s-line"></i><a id="quick-links" href="/chefs">Our Chefs</a><br>
+                        {% if user.is_authenticated %}
+                        <i class="ri-arrow-right-s-line"></i><a id="quick-links" href="/viewcart">Cart</a><br>
+                        <i class="ri-arrow-right-s-line"></i><a id="quick-links" href="/logout">logout</a>
+                        {% else %}
+                        <i class="ri-arrow-right-s-line"></i><a id="quick-links" href="/login">Log In</a><br>
+                        <i class="ri-arrow-right-s-line"></i><a id="quick-links" href="/register">Register</a>
+                        {% endif %}
+                    </p>
+                </p>
+            </div>
+            <!-- column 3 end -->
+
+            <!-- column 4 start -->
+            <div class="column">
+                <p id="column-p">
+                    <h4><i id="h4-i" class="ri-smartphone-line"></i>&nbsp;&nbsp;&nbsp;Follow Us</h4>
+                    <p id="content-p-a">
+                        <a id="socialmedia-links" href=""><i class="ri-twitter-line"></i></a>
+                        <a id="socialmedia-links" href=""><i class="ri-facebook-fill"></i></a>
+                        <a id="socialmedia-links" href=""><i class="ri-instagram-line"></i></a>
+                        <a id="socialmedia-links" href=""><i class="ri-linkedin-fill"></i></a>
+                        <a id="socialmedia-links" href=""><i class="ri-github-fill"></i></a>
+                    </p>
+                </p>
+            </div>
+            <!-- column 4 end -->
+        </div>
+        <!-- footer end -->
+
+        <!-- black container start -->
+        <div class="black-container"></div>
+        <!-- black container end -->
+        <script src="{% static 'asset/js/bootstrap.min.js' %}"></script>
+
+    </body>
+</html>

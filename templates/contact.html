@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block 'main' %}
+{% load static %}
+
+<!-- contact start -->
+<div class="contact-container">
+    <div class="contact-heading1">CONTACT</div>
+    <div class="contact-heading2">NEED HELP? <span>CONTACT US</span></div>
+    <div class="contact-iframecontainer"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.942559277283!2d72.99650747466497!3d19.06626295227923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3bca5a28b65%3A0x142d2263f5378c46!2sItvedant%20Education%20Pvt.%20Ltd%20-%20Navi%20Mumbai!5e0!3m2!1sen!2sin!4v1705307776763!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <div class="contact-info-container">
+        
+        <div class="contact-info-card">
+            <i class="ri-map-2-line"></i>
+            <p id="contact-info-card-p">
+                <span>Our Address</span> <br>
+                A108 Adam Street, New York, NY 535022
+            </p>
+        </div>
+
+        <div class="contact-info-card">
+            <i class="ri-mail-line"></i>
+            <p id="contact-info-card-p">
+                <span>Email Us</span> <br>
+                anshulkumbhare16@gmail.com
+            </p>
+        </div>
+
+        <div class="contact-info-card">
+            <i class="ri-phone-line"></i>
+            <p id="contact-info-card-p">
+                <span>Call Us</span> <br>
+                +91 XXXXX XXXXX
+            </p>
+        </div>
+
+        <div class="contact-info-card">
+            <i class="ri-time-line"></i>
+            <p id="contact-info-card-p">
+                <span>Opening Hours</span> <br>
+                <strong>Mon-Sat: </strong>11AM - 23PM; <strong>Sunday: </strong>Closed
+            </p>
+        </div>
+
+    </div>
+    <div class="contact-form-container">
+        <form method="post">
+            {% csrf_token %}
+            <table border="0px" width="85%" align="center" cellpadding="5px">
+                {% if errmsg %}
+                <tr>
+                    <th colspan="2" style="color: red;">{{errmsg}}</th>
+                </tr>
+                {% endif %}
+                {% if success %}
+                <tr>
+                    <th colspan="2" style="color: green;">{{success}}</th>
+                </tr>
+                {% endif %}
+                <tr>
+                    <td><input type="text" name="uname" id="contact-inp" placeholder="Your name"></td>
+                    <td><input type="email" name="umail" id="contact-inp" placeholder="Your email"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="usubject" id="contact-inp1" placeholder="Subject"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea name="umsg" id="contact-inp1" cols="50" rows="10" placeholder="Message"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" name="btn" id="contact-inp-sub" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+<!-- contact end -->
+
+{% endblock 'main' %}
